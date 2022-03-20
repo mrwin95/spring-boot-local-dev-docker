@@ -1,0 +1,30 @@
+spring:
+    config:
+        activate:
+            on-profile: test
+name: test
+environment: testing
+enabled: false
+
+---
+spring:
+    config:
+        activate:
+            on-profile: prod
+---
+# RabbitMQ properties
+  rabbitmq:
+   addresses: localhost:5672
+   adminAddresses: http://localhost:15672
+   nodes: rabbit@localhost
+   username: guest
+   password: guest
+   virtual_host: /
+   useSSL: false
+   sslProperties:
+   ssl:
+     keyStore:
+     keyStorePassphrase:
+     trustStore:
+     trustStorePassphrase:
+   channelCacheSize: 100
